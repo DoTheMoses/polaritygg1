@@ -1,0 +1,43 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <button onclick="document.getElementById('demo').innerHTML = melee_text">Melee Results</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tournament Thread</th>
+          <th>Results Thread</th>
+          <th>Date</th>
+          <th>1st Place</th>
+          <th>2nd Place</th>
+          <th>3rd Place</th>
+        </tr>
+      </thead>
+      <tbody id="demo"></tbody>
+    </table>
+    <script src="table_info.js"></script>
+    <script>
+      var melee_text = [];    
+      var i;
+      
+      for (i = 0; i < tournaments.length; i++) {
+        melee_text += "<tr>" + 
+          		  "<td>" + tournaments[i].link    + " /td>" +
+                  "<td>" + tournaments[i].results + "</td>" +
+                  "<td>" + tournaments[i].date    + "</td>" + 
+                  "<td>" + tournaments[i].first   + "</td>" + 
+          		  "<td>" + tournaments[i].second  + "</td>" + 
+          		  "<td>" + tournaments[i].third   + "</td>" + 
+                "</tr>"; 
+      }
+      
+      melee_text += "<tr></tr>";
+    </script>
+  
+
+</body></html>
