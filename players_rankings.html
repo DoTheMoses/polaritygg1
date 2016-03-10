@@ -1,0 +1,83 @@
+<html><head>
+    <link rel="icon" href="images/compass_logo_no_background.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="polarity_base.css">
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/polarity_logo.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-justified nav-pills">
+              <li class="active">
+                <a href="https://polarity.gg/index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/about.html">About</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/tournaments.html">Tournaments</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/players_rankings.html">Players &amp; Rankings</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/staff.html">Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Players &amp; Rankings</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('rankings_body').innerHTML = text_melee">CFL Melee Power Rankings</a>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('rankings_body').innerHTML = text_smash_4">CFL Smash 4 Power Rankings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="rankings_body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var text_melee = [];
+                      var text_smash_4 = [];
+                      
+                      text_melee   = "<img src='images/prs/pr_melee.jpg' class='center-block img-responsive'>";
+                      text_smash_4 = "<img src='images/prs/pr_smash_4.jpg' class='center-block img-responsive'>";
+    </script>
+  
+
+</body></html>

@@ -1,0 +1,122 @@
+<html><head>
+    <link rel="icon" href="images/compass_logo_no_background.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="polarity_base.css">
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/polarity_logo.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-justified nav-pills">
+              <li class="active">
+                <a href="https://polarity.gg/index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/about.html">About</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/tournaments.html">Tournaments</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/players_rankings.html">Players &amp; Rankings</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/staff.html">Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Tournaments</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="http://smashboards.com/threads/central-florida-cfl-smackdown-ruleset.363422/"><img src="images/cfl_smackdown_logo.png" class="center-block img-responsive"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('table_body').innerHTML = text_melee">Melee Tournaments</a>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('table_body').innerHTML = text_smash_4">Smash 4 Tournaments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <table id="table_body" class="table"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Complete tournament history to come!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/tournaments_melee.js"></script>
+    <script>
+      // script writes the tables
+                      var text_melee   = [];    
+                      var text_smash_4 = [];
+                                            
+                      var i;
+                                            
+                      // make melee table
+                      // write table header and open "tbody" tag
+                      text_melee += "<thead><tr><th>Date</th><th>Tournament Thread</th><th>Location</th><th>Results</th><th>VODs</th></tr></thead><tbody>";
+                      // write rows
+                      for (i = 0; i < tournaments_melee.length; i++) {
+                      text_melee += "<tr>" + 
+                                      "<td>" + tournaments_melee[i].date + "</td>" + 
+                                      "<td>" + "<a href='" + tournaments_melee[i].event_link    + "'>" + tournaments_melee[i].event_name + "</td>" +
+                                      "<td>" + "<a href='" + tournaments_melee[i].location_link + "'>" + tournaments_melee[i].location + "</td>" + 
+                                      "<td>" + "<a href='" + tournaments_melee[i].results_link  + "'>Results" + "</td>" +
+                                      "<td>" + "<a href='" + tournaments_melee[i].vods_link     + "'>VODs" + "</td>" + 
+                             	    "</tr>"; 
+                      }
+                                            
+                      // close "tbody" tag
+                      text_melee += "</tbody>";
+                                            
+                      // make smash 4 table
+                      text_smash_4 += "<div class='section'><div class='container'><div class='row'><div class='col-md-12'><h1 class='text-center'>Smah 4 tournament history to come!</h1></div></div></div></div>";
+    </script>
+  
+
+</body></html>

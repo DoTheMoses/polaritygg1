@@ -1,0 +1,151 @@
+<html><head>
+    <link rel="icon" href="images/compass_logo_no_background.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="polarity_base.css">
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/polarity_logo.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-justified nav-pills">
+              <li class="active">
+                <a href="https://polarity.gg/index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/about.html">About</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/tournaments.html">Tournaments</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/players_rankings.html">Players &amp; Rankings</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/staff.html">Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Players</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Search Players</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter player name">
+                  <span class="input-group-btn">
+                    <a class="btn btn-block btn-md btn-primary" type="submit">Go</a>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('players_az_body').innerHTML = text_melee">Melee Players A - Z</a>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('players_az_body').innerHTML = text_smash_4">Smash 4 Players A - Z</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <table id="players_az_body" class="table"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var player_5 = {
+          name: 		"Moses"
+  };
+  var player_4 = {
+          name: 		"Colbol"
+  };
+  var player_3 = {
+          name:		"BluEG"
+  };
+  var player_2 = {
+          name: 		"Harriet"
+  };      
+  var player_1 = {
+          name: 		"Plup"
+  };
+  var player_0 = {
+          name: 		"Fearless"
+  };
+  
+  var players_melee = [
+  	player_5,
+  	player_4,
+  	player_3, 
+  	player_2, 
+  	player_1, 
+  	player_0 
+  ];
+    </script>
+    <script>
+      var text_melee = [];
+              var text_smash_4 = [];
+                      
+              var i;
+                                                            
+              // make melee table
+      	      // write table header and open "tbody" tag
+              //text_melee += "<thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></thead><tbody>";
+              // write rows
+              for (i = 0; i < players_melee.length; (i = i + 3)) {
+              text_melee += "<tr>" + 
+                              "<td>" + players_melee[i].name   + " </td>" + 
+                              "<td>" + players_melee[i+1].name + " </td>" +
+                              "<td>" + players_melee[i+2].name + " </td>" + 
+                            "</tr>"; 
+              }
+                                                            
+              // close "tbody" tag
+              text_melee += "</tbody>";
+        
+              text_smash_4 = "<img src='images/prs/pr_smash_4.jpg' class='center-block img-responsive'>";
+    </script>
+  
+
+</body></html>

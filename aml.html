@@ -1,0 +1,155 @@
+<html><head>
+    <link rel="icon" href="images/compass_logo_no_background.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="polarity_base.css">
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/polarity_logo.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-justified nav-pills">
+              <li class="active">
+                <a href="https://polarity.gg/index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/about.html">About</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/tournaments.html">Tournaments</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/players_rankings.html">Players &amp; Rankings</a>
+              </li>
+              <li class="active">
+                <a href="https://polarity.gg/staff.html">Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Amateur Melee League</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('text_body').innerHTML = text_season_1">Season 1<br></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a class="btn btn-block btn-lg btn-primary" onclick="document.getElementById('text_body').innerHTML = text_season_2">Season 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+          <p id="text_body"></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/tournaments_melee.js"></script>
+    <script>
+      // script writes the tables
+                              var text_season_1 = [];    
+                              var text_season_2 = [];
+                                                    
+                              var i;
+                                                    
+                              // write stuff for season 1
+      						  text_season_1 += 	"<p><a href='http://smashboards.com/threads/the-amateur-melee-league-season-1-cfl.410319/'>Season 1 Format and Rules</a></p>" +
+                                 			   	"<p><a href='https://www.youtube.com/channel/UClL6vf6mG4aNDkvzdyYNdAA'>Season 1 VODs</a></p>" 
+                              					+ "<p><a href='http://challonge.com/users/themeleeleague'>Season 1 Full Pools and Final Bracket Results</a></p>";
+      
+//      The Champion 
+//1. g0d, $146
+//
+//2. , 
+//:
+//3. , 
+//:
+//4. , $37
+//:
+//5. , $18
+//:
+///5. , $18
+//:
+//7. 
+//:
+//7. 
+
+//<table id="table_body" class="table"></table>
+     	text_season_1 += "<div class='section'><div class='container'><div class='row'><div class='col-md-12'><h1 class='text-center'>Season 1 Top 8</h1></div></div></div></div>";						  
+      	text_season_1 += "<table class='table'>";
+          					  
+		text_season_1 += "<thead><tr><th>Place</th><th>Tag</th><th>Payout</th></tr></thead><tbody>";
+//                              // write rows of results table
+      
+		text_season_1 += "<tr>" + "<td>" + "#1: The Champion" 							+ "</td>" + "<td>" + "g0d" 				+ "</td>" + "<td>" + "$146" + "</td>" + "</tr>"; 
+		text_season_1 += "<tr>" + "<td>" + "#2: Our Fine, Fiery, Fox" 					+ "</td>" + "<td>" + "Lad" 				+ "</td>" + "<td>" + "$91"  + "</td>" + "</tr>"; 
+		text_season_1 += "<tr>" + "<td>" + "#3: The Best Tag In Smash" 					+ "</td>" + "<td>" + "DoomChickens" 	+ "</td>" + "<td>" + "$55"  + "</td>" + "</tr>"; 
+ 		text_season_1 += "<tr>" + "<td>" + "#4: The Falco You Didn't Know You Feared" 	+ "</td>" + "<td>" + "Kaike" 			+ "</td>" + "<td>" + "$37"  + "</td>" + "</tr>";      
+ 		text_season_1 += "<tr>" + "<td>" + "#5: The Beast From South Florida" 			+ "</td>" + "<td>" + "Eclipsing Binary" + "</td>" + "<td>" + "$18"  + "</td>" + "</tr>";      
+		text_season_1 += "<tr>" + "<td>" + "#5: The Old Dog Showing Us New Tricks" 		+ "</td>" + "<td>" + "Hiroshi" 			+ "</td>" + "<td>" + "$18"  + "</td>" + "</tr>";       
+		text_season_1 += "<tr>" + "<td>" + "#7: The Voice of Reason" 					+ "</td>" + "<td>" + "Derdian" 			+ "</td>" + "<td>" + "$0"   + "</td>" + "</tr>";       
+		text_season_1 += "<tr>" + "<td>" + "#7: The Beardless Wonder" 					+ "</td>" + "<td>" + "Oaty" 			+ "</td>" + "<td>" + "$0"   + "</td>" + "</tr>";       
+
+		text_season_1 += "</table>";
+                              // close "tbody" tag
+//                              text_melee += "</tbody>";                              
+
+
+
+
+// write table header and open "tbody" tag
+                              //text_season_2 += "<thead><tr><th>Date</th><th>Tournament Thread</th><th>Location</th><th>Results</th><th>VODs</th></tr></thead><tbody>";
+                              // write rows
+                              text_season_2 += "<p>Season 2 Smashboards Post</p>" + "<p>Season 2 VODs</p>" + "<p>Season 2 Results</p>";
+      
+      					      //for (i = 0; i < tournaments_melee.length; i++) {
+                              //text_season_2 += "<tr>" + 
+                              //                "<td>" + tournaments_melee[i].date + "</td>" + 
+                              //                "<td>" + "<a href='" + tournaments_melee[i].event_link    + "'>" + tournaments_melee[i].event_name + "</td>" +
+                              //                "<td>" + "<a href='" + tournaments_melee[i].location_link + "'>" + tournaments_melee[i].location + "</td>" + 
+                              //                "<td>" + "<a href='" + tournaments_melee[i].results_link  + "'>Results" + "</td>" +
+                              //                "<td>" + "<a href='" + tournaments_melee[i].vods_link     + "'>VODs" + "</td>" + 
+                              //       	    "</tr>"; 
+                              //}
+                                                    
+                              // close "tbody" tag
+                              //text_melee += "</tbody>";
+                                                    
+                              // make smash 4 table
+                              //text_smash_4 += "<div class='section'><div class='container'><div class='row'><div class='col-md-12'><h1 class='text-center'>Smah 4 tournament history to come!</h1></div></div></div></div>";
+    </script>
+  
+
+</body></html>
